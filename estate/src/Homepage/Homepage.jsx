@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./HomePage.css";
 import Logo from "../assets/png/logo-white.png";
 import house1 from "../assets/house1.jpg";
@@ -27,6 +28,11 @@ const images = [
 
 function HomePage() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const NavigateTo = useNavigate();
+
+  const handleClick = () => {
+    NavigateTo(`/Register`);
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -80,6 +86,7 @@ function HomePage() {
               </Link>
             </li>
           </ul>
+          <button onClick={handleClick} className="register_button">Sign In</button>
         </nav>
       </div>
       <div className="glow-circle"></div>

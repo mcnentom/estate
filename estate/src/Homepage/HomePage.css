@@ -7,11 +7,33 @@
 .headerDiv{
   position: relative;
   height: 1.5rem;
+  display: flex;
+  width: fit-content;
+  margin-left: 70%;
+  margin-top: 1%;
 }
 .headerLinks{
   display: flex;
   justify-content: flex-end;
 }
+nav{
+  width: fit-content;
+  display: flex;
+  align-items: center;
+ 
+}
+.register_button{
+  width: 5rem;
+  height: 2rem;
+  border-radius: 1rem;
+  border: none;
+}
+.register_button:hover{
+  background: blue;
+  cursor: pointer;
+  border: none;
+  outline: none;
+} 
 li{
   margin-right: 2rem;
   list-style: none;
